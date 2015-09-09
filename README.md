@@ -95,7 +95,7 @@ function pelaa_kierros()
         kolikko = 'klaava'
     end
     if arvaus == kolikko then
-        print('Veikkaisit ' .. arvaus ..
+        print('Veikkasit ' .. arvaus ..
               ' ja tuli ' .. kolikko .. '. VOITIT!')
     else
         print('Voi voi, veikkasit ' .. arvaus ..
