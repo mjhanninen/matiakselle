@@ -144,7 +144,7 @@ end
 ```lua
 askeleita_enintaan = 8
 
-piirrustusmerkit = { ' ', '.', ':', '+', '*', '#', '@', ' ' }
+piirustusmerkit = { ' ', '.', ':', '+', '*', '#', '@', ' ' }
 
 for y = 1, 70 do
 
@@ -167,7 +167,7 @@ for y = 1, 70 do
 
         local askel = laske_askeleet(0, 0, 0)
 
-        io.write(piirrustusmerkit[askel])
+        io.write(piirustusmerkit[askel])
 
     end
 
