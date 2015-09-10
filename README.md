@@ -142,17 +142,20 @@ end
 ## Ohjelma 10
 
 ```lua
-maksimi_askeleet = 8
+askeleita_enintaan = 8
+
+piirrustusmerkit = { ' ', '.', ':', '+', '*', '#', '@', ' ' }
 
 for y = 1, 70 do
+
     for x = 1, 80 do
 
         local piste_r = (x - 50.5) / 25
         local piste_i = (y - 35.5) / 25
 
         function laske_askeleet(z_r, z_i, askel)
-            if askel >= maksimi_askeleet then
-                return maksimi_askeleet
+            if askel >= askeleita_enintaan then
+                return askeleita_enintaan
             elseif z_r * z_r + z_i * z_i > 4 then
                 return askel
             else
@@ -164,23 +167,7 @@ for y = 1, 70 do
 
         local askel = laske_askeleet(0, 0, 0)
 
-        if askel == 1 then
-            io.write('`')
-        elseif askel == 2 then
-            io.write('.')
-        elseif askel == 3 then
-            io.write(':')
-        elseif askel == 4 then
-            io.write('+')
-        elseif askel == 5 then
-            io.write('*')
-        elseif askel == 6 then
-            io.write('#')
-        elseif askel == 7 then
-            io.write('@')
-        elseif askel == 8 then
-            io.write(' ')
-        end
+        io.write(piirrustusmerkit[askel])
 
     end
 
